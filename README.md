@@ -6,3 +6,4 @@ reference: https://tutorial.djangogirls.org/en/
 4. create a Django Project (myblogapp)
 5. update settings.py
 6. create an app (blog)
+7. create Post model & added model in /admin
