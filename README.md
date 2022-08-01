@@ -10,3 +10,5 @@ reference: https://tutorial.djangogirls.org/en/
 8. created url paths for blog app, setup views and template
 9. created initial index page (post_list)
 10. implemented design
+11. template extension
+12. created details page targeting pks/ids

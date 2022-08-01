@@ -2,8 +2,13 @@ body {
     font-family: 'Mouse Memoirs', sans-serif;
 }
 
-h2 {
+h2, a:active, a:hover, a:link, a:visited {
     color: #008B8B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
 }
 
 .page_header {
