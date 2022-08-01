@@ -8,3 +8,5 @@ reference: https://tutorial.djangogirls.org/en/
 6. create an app (blog)
 7. create Post model & added model in /admin
 8. created url paths for blog app, setup views and template
+9. created initial index page (post_list)
+10. implemented design

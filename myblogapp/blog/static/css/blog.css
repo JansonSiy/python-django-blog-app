@@ -1,0 +1,18 @@
+body {
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+h2 {
+    color: #008B8B;
+}
+
+.page_header {
+    background-color: #008B8B;
+    color: whitesmoke;
+    padding: 20px 0px 20px 40px;
+    margin: 0px 0px 40px 0px;
+}
+
+.page_body {
+    padding: 0px 0px 0px 40px;
+}
