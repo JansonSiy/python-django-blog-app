@@ -1,1 +1,19 @@
-<h1>test rendering</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Janson's Blog App</title>
+    </head>
+    <body>
+        <header>
+            <h1>Janson's Blog App</h1>
+        </header>
+        {% for post in posts %}
+            <article>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text}}</p>
+                <time>Published: {{ post.published_date }}</time>
+                <address>Author: {{ post.author }}</address>
+            </article>
+        {% endfor %}
+    </body>
+</html>
