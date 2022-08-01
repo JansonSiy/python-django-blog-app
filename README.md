@@ -7,3 +7,4 @@ reference: https://tutorial.djangogirls.org/en/
 5. update settings.py
 6. create an app (blog)
 7. create Post model & added model in /admin
+8. created url paths for blog app, setup views and template
