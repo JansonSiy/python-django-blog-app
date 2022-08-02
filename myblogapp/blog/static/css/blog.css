@@ -2,7 +2,7 @@ body {
     font-family: 'Mouse Memoirs', sans-serif;
 }
 
-h2, a:active, a:hover, a:link, a:visited {
+h2, a:active, a:hover, a:link, a:visited, .messages {
     color: #008B8B;
     text-decoration: none;
 }
@@ -15,9 +15,29 @@ a:hover {
     background-color: #008B8B;
     color: whitesmoke;
     padding: 20px 0px 20px 40px;
-    margin: 0px 0px 40px 0px;
 }
 
 .page_body {
-    padding: 0px 0px 0px 40px;
+    padding: 20px 40px 0px 40px;
 }
+
+.actions, .messages {
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-evenly;
+}
+
+.actions {
+    margin: 0px 0px 10px 0px;
+}
+
+/* need to declare 0px to alter built in design */
+.messages {
+    margin: 0px 0px 0px 0px;
+}
+
+.messages li{
+    list-style-type: none;
+  }

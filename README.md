@@ -12,3 +12,4 @@ reference: https://tutorial.djangogirls.org/en/
 10. implemented design
 11. template extension
 12. created details page targeting pks/ids
+13. created create new post feature

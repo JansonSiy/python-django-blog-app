@@ -12,10 +12,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet" type="text/css">
     </head>
     <body>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         <header class="page_header">
             <h1>Janson's Blog App</h1>
         </header>
-        {% block content %}
-        {% endblock %}
+        <div class="page_body">
+            {% block content %}
+            {% endblock %}
+        </div>
     </body>
 </html>
