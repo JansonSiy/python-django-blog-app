@@ -13,3 +13,5 @@ reference: https://tutorial.djangogirls.org/en/
 11. template extension
 12. created details page targeting pks/ids
 13. created create new post feature
+14. create edit post feature
+15. created delete post feature
