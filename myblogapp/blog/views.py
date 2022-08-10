@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.core.paginator import Paginator
 from django.shortcuts import redirect, render, get_object_or_404
 from django.utils import timezone
 
@@ -8,9 +9,13 @@ from .models import Post
 
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    post_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    pagination = Paginator(post_list, 5)
+    page = request.GET.get('page')
+    posts = pagination.get_page(page)
 
     context = {
+        'post_list': post_list,
         'posts': posts,
     }
 
