@@ -14,6 +14,15 @@ def post_list(request):
     page = request.GET.get('page')
     posts = pagination.get_page(page)
 
+    # to be used in html template
+    # posts: {{ posts }}
+    # Has Previous?: {{ posts.has_previous }}
+    # Has Next?: {{ posts.has_next }}
+    # Current Page: {{ posts.number }}
+    # Number of Pages: {{ posts.paginator.num_pages }}
+    # Previous Page Number: {{ posts.previous_page_number }}
+    # Next Page Number: {{ posts.next_page_number }}
+
     context = {
         'post_list': post_list,
         'posts': posts,

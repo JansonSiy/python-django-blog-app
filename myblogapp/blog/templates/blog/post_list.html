@@ -3,6 +3,8 @@
 {% block content %}
     <div class="actions">
         <a href="{% url 'new_post' %}">+ Add +</a>
+        <a href="?page=1">- First Page -</a>
+        <a href="?page={{ posts.paginator.num_pages }}">- Last Page -</a>
     </div>
     {% for post in posts %}
         <article>
@@ -13,21 +15,16 @@
         <hr>
     {% endfor %}
 
-    posts: {{ posts }}<br>
-    Has Previous?: {{ posts.has_previous }}<br>
-    Has Next?: {{ posts.has_next }}<br>
-    Current Page: {{ posts.number }}<br>
-    Number of Pages: {{ posts.paginator.num_pages }}<br>
-    Previous Page Number: {{ posts.previous_page_number }}<br>
-    Next Page Number: {{ posts.next_page_number }}<br><br>
-
     {% if posts.has_previous %}
-        <a href="?page={{ posts.previous_page_number }}">Previous</a>
+        <a href="?page={{ posts.previous_page_number }}">Previous Page</a> |
+    {% else %}
+        <a href="#">No Previous Page</a> |
     {% endif %}
-
     {% if posts.has_next %}
-        <a href="?page={{ posts.next_page_number }}">Next</a>
+        <a href="?page={{ posts.next_page_number }}">Next Page</a>
+    {% else %}
+        <a href="#">No Next Page</a>
     {% endif %}
-
+    <br>
     Page {{ posts.number }} of {{ posts.paginator.num_pages }}
 {% endblock %}
