@@ -6,6 +6,13 @@
         <a href="?page=1">- First Page -</a>
         <a href="?page={{ posts.paginator.num_pages }}">- Last Page -</a>
     </div>
+
+    <form action="" method="GET">
+        {% csrf_token %}
+        <input type="text" name="search" {% if search %}value='{{ search }}'{% endif %} placeholder="Search by title">
+        <button type="submit" class="save btn btn-secondary">Search</button>
+    </form>
+
     {% for post in posts %}
         <article>
             <h2><a href="{% url 'post_details' post.id %}">{{ post.title }}</a></h2>
