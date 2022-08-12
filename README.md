@@ -1,5 +1,17 @@
-# python-django-blog-app
-reference: https://tutorial.djangogirls.org/en/
+<h1>Blog App</h1>
+
+<h3>Features</h3>
+<ul>
+  <li>Shared base template <i>(for header and notification feature)</i></li>
+  <li>Post list in index page</li>
+  <li>Create new post <i>(also in Admin)</i></li>
+  <li>View post details</li>
+  <li>Edit post details</li>
+  <li>Delete posts</li>
+  <li>Pagination <i>(including jumping to either first or last page)</i></li>
+</ul>
+
+<!-- reference: https://tutorial.djangogirls.org/en/
 1. create Virtual Environment (venv_blog_app)
 2. upgrade/install Pip
 3. create and run requirements.txt
@@ -15,3 +27,4 @@ reference: https://tutorial.djangogirls.org/en/
 13. created create new post feature
 14. create edit post feature
 15. created delete post feature
+16. created pagination feature -->
