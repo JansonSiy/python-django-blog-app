@@ -13,14 +13,26 @@
         <button type="submit" class="save btn btn-secondary">Search</button>
     </form>
 
-    {% for post in posts %}
-        <article>
-            <h2><a href="{% url 'post_details' post.id %}">{{ post.title }}</a></h2>
-            <time>Published: {{ post.published_date }}</time>
-            <address>Author: {{ post.author }}</address>
-        </article>
-        <hr>
-    {% endfor %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Published Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                    <td>
+                        <a href="{% url 'post_details' post.id %}">{{ post.title }}</a>
+                    </td>
+                    <td>{{ post.author }}</td>
+                    <td>{{ post.published_date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
     {% if posts.has_previous %}
         <a href="?page={{ posts.previous_page_number }}">Previous Page</a> |
