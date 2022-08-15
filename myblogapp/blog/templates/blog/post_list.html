@@ -9,8 +9,10 @@
 
     <form action="" method="GET">
         {% csrf_token %}
-        <input type="text" name="search" {% if search %}value='{{ search }}'{% endif %} placeholder="Search by title">
-        <button type="submit" class="save btn btn-secondary">Search</button>
+        <div class="input-group">
+            <input class="form-control" name="search" placeholder="Search by title" type="text">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </div>
     </form>
 
     <table class="table table-striped">
