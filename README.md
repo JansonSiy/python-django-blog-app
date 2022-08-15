@@ -9,6 +9,7 @@
   <li>Edit post details</li>
   <li>Delete posts</li>
   <li>Pagination <i>(including jumping to either first or last page)</i></li>
+  <li>Search function <i>(displaying latest 5 published dates)</i></li>
 </ul>
 
 <!-- reference: https://tutorial.djangogirls.org/en/
@@ -27,4 +28,5 @@
 13. created create new post feature
 14. create edit post feature
 15. created delete post feature
-16. created pagination feature -->
+16. created pagination feature
+17. created search feature -->
